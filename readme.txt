@@ -1,3 +1,5 @@
+%  CircularMap: A numerical implementation of the circular map in MATLAB
+%
 %  Copyright Mohamed Nasser 2017
 %  Please cite this MATLAB functions as:
 %
