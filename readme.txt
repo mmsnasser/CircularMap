@@ -41,5 +41,10 @@
 % 2. etp: the derivative of the parameterization of the boundary of G
 % 3. alpha: is a point in G that will be mapped onto 0 in \Omega
 % 4. n: the number of discretization points of each boundary component
+% 5. koebetol: the tolerance of Koebe iterative method
+% 6. gmrestol: the tolerance of GMRES iterative method
+% 7. koebemaxit: the maximum number of iterations allowed for Koebe iterative method
+% 8. gmresmaxit:the maximum number of iterations allowed for GMRES iterative method
+% 9. iprec: for the accurecy of the FMM (see zfmm2dpart.m).
 
 
