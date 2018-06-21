@@ -75,7 +75,9 @@ bounded G; and the radius of the circles C_1,...,C_m for unbounded G.
 
 2. etp: the derivative of the parameterization of the boundary of G
 
-3. alpha: is a point in G that will be mapped onto 0 in \Omega
+3. alpha: for bounded G, alpha is a point in G that will be mapped 
+   onto 0 in \Omega; for unbounded G, alpha=inf and it will be mapped
+   onto inf.
 
 4. n: the number of discretization points of each boundary component
 
