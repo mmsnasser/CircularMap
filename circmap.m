@@ -20,7 +20,9 @@ function   [zet,zetp,cntd,rad]=circmap(et,etp,alphain,n,koebetol,koebemaxit,gmre
 % where
 % 1. et: the parameterization of the boundary of G.
 % 2. etp: the derivative of the parameterization of the boundary of G
-% 3. alpha: is a point in G that will be mapped onto 0 in \Omega
+% 3. alpha: for bounded G, alpha is a point in G that will be mapped 
+%    onto 0 in \Omega; for unbounded G, alpha=inf and it will be mapped
+%    onto inf.
 % 4. n: the number of discretization points of each boundary component
 % 5. koebetol: the tolerance of Koebe iterative method
 % 6. gmrestol: the tolerance of GMRES iterative method
@@ -72,6 +74,9 @@ elseif ( nargin == 4 )
     koebemaxit     = 100;
     koebetol       = 1e-13;
 end
+if (length(et)==n)
+    koebemaxit =1;
+end    
 %%
 if abs(alphain)<inf
     [zet,zetp,cntd,rad]=circmapb(et,etp,alphain,n,koebetol,koebemaxit,gmrestol,gmresmaxit,iprec);
